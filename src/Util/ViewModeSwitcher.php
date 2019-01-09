@@ -13,7 +13,7 @@ use Drupal\Core\Entity\FieldableEntityInterface;
 class ViewModeSwitcher {
 
   /**
-   * Switch the view mode of an entity based on the current user's role and the rules set.
+   * Switch entity's view mode based on current user's role and the rules set.
    *
    * @param \Drupal\Core\Entity\EntityInterface $entity
    *   The entity.
@@ -26,7 +26,7 @@ class ViewModeSwitcher {
    *   The view mode to show.
    */
   public static function switchViewModes(EntityInterface $entity, string $viewMode, array $roles) {
-    // We can't possibly have our field on an entity that does not support fields.
+    // We can't have our field on an entity that does not support fields.
     if (!$entity instanceof FieldableEntityInterface) {
       return $viewMode;
     }

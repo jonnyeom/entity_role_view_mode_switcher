@@ -125,7 +125,7 @@ class RuleForm extends EntityForm {
 
       $form['conditions_container']['table'][$delta]['remove_condition'] = [
         '#type' => 'submit',
-        '#value' => t('Remove'),
+        '#value' => $this->t('Remove'),
         '#submit' => ['::ajaxRemoveCondition'],
         '#ajax' => [
           'callback' => '::ajaxRemoveConditionCallback',
@@ -141,7 +141,7 @@ class RuleForm extends EntityForm {
 
     $form['conditions_container']['add_condition'] = [
       '#type' => 'submit',
-      '#value' => t('Add Condition'),
+      '#value' => $this->t('Add Condition'),
       '#submit' => ['::ajaxAddCondition'],
       '#ajax' => [
         'callback' => '::ajaxAddConditionCallback',
@@ -229,7 +229,7 @@ class RuleForm extends EntityForm {
     // Check to see if there is more than one item in our array.
     $conditionsDeltas = $form_state->get('conditions_deltas');
     if (\count($conditionsDeltas) > 0) {
-      // Add a new element to our array and set it to our highest value plus one.
+      // Add a new element to array and set it to our highest value plus one.
       $conditionsDeltas[] = max($conditionsDeltas) + 1;
     }
     else {
