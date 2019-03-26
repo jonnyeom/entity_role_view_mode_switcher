@@ -21,8 +21,8 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     "route_provider" = {
  *       "html" = "Drupal\entity_role_view_mode_switcher\RuleHtmlRouteProvider",
  *     },
- *    "access" = "Drupal\entity\EntityAccessControlHandler",
- *    "permission_provider" = "Drupal\entity\EntityPermissionProvider"
+ *    "access" = "Drupal\Core\Entity\EntityAccessControlHandler",
+ *    "permission_provider" = "Drupal\Core\Entity\EntityAccessControlHandler"
  *   },
  *   config_prefix = "rule",
  *   admin_permission = "administer site configuration",
